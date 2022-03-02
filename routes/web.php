@@ -24,3 +24,7 @@ Route::get('/albums', function () {
 Route::get('/eu', function () {
     return view('eu');
 });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

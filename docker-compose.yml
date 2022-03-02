@@ -23,9 +23,10 @@ services:
   #nginx
   nginx:
     image: nginx:alpine
-    restart: always
+    restart: unless-stopped
     ports:
-      - 80:80
+      - 8989:89
+
     volumes:
       - ./:/var/www
       - ./docker/nginx/:/etc/nginx/conf.d/
@@ -35,9 +36,9 @@ services:
   # db
   mysql:
     image: mysql:5.7.22
-    restart: always
+    restart: unless-stopped
     ports:
-      - 3307:3306
+      - 3306:3306
     volumes:
       - ./.docker/mysql:/var/lib/mysql
     environment:
@@ -47,14 +48,24 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD}
     networks:
       - docker-laravel
+
   # phpmyadmin
   phpmyadmin:
     image: phpmyadmin
-    restart: always
+    restart: unless-stopped
     ports:
-      - 8181:80
+      - 8383:81
     environment:
       - PMA_ARBITRARY=1
+        - PMA_HOST=mysql
+        - PMA_PORT=3306
+        - PMA_USER=${DB_USERNAME}
+        - PMA_PASSWORD=${DB_PASSWORD}
+        - PMA_DATABASE=${DB_DATABASE}
+    networks:
+        - docker-laravel
+    volumes:
+        - ./docker/phpmyadmin/:/etc/phpmyadmin/
 
   # redis
   redis:
@@ -70,7 +81,7 @@ services:
         uid: 1000
       context: ./
       dockerfile: Dockerfile
-    restart: always
+    restart: unless-stopped
     command: "php artisan queue:work"
     volumes:
       - ./:/var/www

@@ -1,0 +1,8 @@
+$ docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                          PORTS                          NAMES
+746546dd00a0   laravel-app       "docker-php-entrypoi…"   2 minutes ago   Up About a minute               9000/tcp                       laravel-9-app-1
+6e4a78982b4f   laravel-9_queue   "docker-php-entrypoi…"   2 minutes ago   Up About a minute               9000/tcp                       laravel-9-queue-1
+da338c868301   phpmyadmin        "/docker-entrypoint.…"   2 minutes ago   Up About a minute               80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
+2f7d04a40e85   mysql:5.7.22      "docker-entrypoint.s…"   2 minutes ago   Restarting (1) 44 seconds ago                                  laravel-9-mysql-1
+f92711cb81be   redis:latest      "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes                    6379/tcp                       laravel-9-redis-1
+cdc15ad1d418   nginx:alpine      "/docker-entrypoint.…"   2 minutes ago   Up About a minute               80/tcp, 0.0.0.0:8989->89/tcp   laravel-9-nginx-1
