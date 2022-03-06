@@ -1,8 +1,30 @@
 $ docker ps
-CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS                          PORTS                          NAMES
-746546dd00a0   laravel-app       "docker-php-entrypoi…"   2 minutes ago   Up About a minute               9000/tcp                       laravel-9-app-1
-6e4a78982b4f   laravel-9_queue   "docker-php-entrypoi…"   2 minutes ago   Up About a minute               9000/tcp                       laravel-9-queue-1
-da338c868301   phpmyadmin        "/docker-entrypoint.…"   2 minutes ago   Up About a minute               80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
-2f7d04a40e85   mysql:5.7.22      "docker-entrypoint.s…"   2 minutes ago   Restarting (1) 44 seconds ago                                  laravel-9-mysql-1
-f92711cb81be   redis:latest      "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes                    6379/tcp                       laravel-9-redis-1
-cdc15ad1d418   nginx:alpine      "/docker-entrypoint.…"   2 minutes ago   Up About a minute               80/tcp, 0.0.0.0:8989->89/tcp   laravel-9-nginx-1
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS              PORTS                          NAMES
+f83dbbb37b6a   laravel-app       "docker-php-entrypoi…"   About a minute ago   Up About a minute   9000/tcp                       laravel-9-app-1
+1f973e38d68f   laravel-9_queue   "docker-php-entrypoi…"   About a minute ago   Up About a minute   9000/tcp                       laravel-9-queue-1
+f241fbf0aa08   phpmyadmin        "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
+df2388edaf1b   nginx:alpine      "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp, 0.0.0.0:8989->89/tcp   laravel-9-nginx-1
+ee54f2c29e2e   mysql:5.7.22      "docker-entrypoint.s…"   About a minute ago   Up 35 seconds       0.0.0.0:3306->3306/tcp         laravel-9-mysql-1
+44d4edc11c60   redis:latest      "docker-entrypoint.s…"   About a minute ago   Up About a minute   6379/tcp                       laravel-9-redis-1
+
+
+## ultima versao abaixo
+
+$ docker ps  
+CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS          PORTS                          NAMES
+1b510210475a   laravel-app       "docker-php-entrypoi…"   54 seconds ago       Up 46 seconds   9000/tcp                       laravel-9-app-1
+1a588a1df126   laravel-9_queue   "docker-php-entrypoi…"   54 seconds ago       Up 49 seconds   9000/tcp                       laravel-9-queue-1
+6a140b5a68d0   nginx:alpine      "/docker-entrypoint.…"   About a minute ago   Up 50 seconds   80/tcp, 0.0.0.0:8989->89/tcp   laravel-9-nginx-1
+aecd032b1f45   phpmyadmin        "/docker-entrypoint.…"   About a minute ago   Up 50 seconds   80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
+7c08be689d47   mysql:5.7.22      "docker-entrypoint.s…"   About a minute ago   Up 51 seconds   0.0.0.0:3306->3306/tcp         laravel-9-mysql-1
+b14d8c7c8288   redis:latest      "docker-entrypoint.s…"   About a minute ago   Up 51 seconds   6379/tcp                       laravel-9-redis-1
+ 
+ ## ultima versao apos atualizar docker pra versao 
+$ docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                          NAMES
+70c7d5b551c0   laravel-app       "docker-php-entrypoi…"   22 seconds ago   Up 14 seconds   9000/tcp                       laravel-9-app-1
+7cabcce265a3   laravel-9_queue   "docker-php-entrypoi…"   24 seconds ago   Up 16 seconds   9000/tcp                       laravel-9-queue-1
+40039206d8af   phpmyadmin        "/docker-entrypoint.…"   37 seconds ago   Up 18 seconds   80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
+e4581c37812b   redis:latest      "docker-entrypoint.s…"   37 seconds ago   Up 19 seconds   6379/tcp                       laravel-9-redis-1
+ef06f9a1bf5a   nginx:alpine      "/docker-entrypoint.…"   37 seconds ago   Up 18 seconds   80/tcp, 0.0.0.0:8989->89/tcp   laravel-9-nginx-1
+39dbd6f809a5   mysql:5.7.22      "docker-entrypoint.s…"   37 seconds ago   Up 17 seconds   0.0.0.0:3306->3306/tcp         laravel-9-mysql-1

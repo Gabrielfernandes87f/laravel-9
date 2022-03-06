@@ -14,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'Welcome to the API',
+        'version' => '1.0.0',
+        'author' => 'gabriel.fernandes',
+        'email' => 'gabrielfernandesfotografias@outlook.com',
+        'github' => 'Gabrielfernandes87f'
+    ]);
+});
+
+
+
+
+/* Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+ */
