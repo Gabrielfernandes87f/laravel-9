@@ -10,7 +10,7 @@ ee54f2c29e2e   mysql:5.7.22      "docker-entrypoint.s…"   About a minute ago  
 
 ## ultima versao abaixo
 
-$ docker ps  
+$ docker ps
 CONTAINER ID   IMAGE             COMMAND                  CREATED              STATUS          PORTS                          NAMES
 1b510210475a   laravel-app       "docker-php-entrypoi…"   54 seconds ago       Up 46 seconds   9000/tcp                       laravel-9-app-1
 1a588a1df126   laravel-9_queue   "docker-php-entrypoi…"   54 seconds ago       Up 49 seconds   9000/tcp                       laravel-9-queue-1
@@ -18,8 +18,8 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED              S
 aecd032b1f45   phpmyadmin        "/docker-entrypoint.…"   About a minute ago   Up 50 seconds   80/tcp, 0.0.0.0:8383->81/tcp   laravel-9-phpmyadmin-1
 7c08be689d47   mysql:5.7.22      "docker-entrypoint.s…"   About a minute ago   Up 51 seconds   0.0.0.0:3306->3306/tcp         laravel-9-mysql-1
 b14d8c7c8288   redis:latest      "docker-entrypoint.s…"   About a minute ago   Up 51 seconds   6379/tcp                       laravel-9-redis-1
- 
- ## ultima versao apos atualizar docker pra versao 
+
+ ## ultima versao apos atualizar docker pra versao
 $ docker ps
 CONTAINER ID   IMAGE             COMMAND                  CREATED          STATUS          PORTS                          NAMES
 70c7d5b551c0   laravel-app       "docker-php-entrypoi…"   22 seconds ago   Up 14 seconds   9000/tcp                       laravel-9-app-1
