@@ -3,6 +3,7 @@ version: "3.8"
 services:
   # custom image
   app:
+    container_name: laravel-app-9
     build:
       args:
         user: gabriel
@@ -22,10 +23,11 @@ services:
 
   #nginx
   nginx:
+    container_name: laravel-nginx
     image: nginx:alpine
     restart: unless-stopped
     ports:
-      - 8989:89
+      - 8989:80
 
     volumes:
       - ./:/var/www
@@ -35,6 +37,7 @@ services:
 
   # db
   mysql:
+    container_name: laravel-mysql
     image: mysql:5.7.22
     restart: unless-stopped
     ports:
@@ -51,6 +54,7 @@ services:
 
   # phpmyadmin
   phpmyadmin:
+    container_name: laravel-phpmyadmin
     image: phpmyadmin
     restart: unless-stopped
     ports:
@@ -69,12 +73,14 @@ services:
 
   # redis
   redis:
+    container_name: laravel-redis
     image: redis:latest
     networks:
       - docker-laravel
 
   # queue
   queue:
+    container_name: laravel-queue
     build:
       args:
         user: gabriel
